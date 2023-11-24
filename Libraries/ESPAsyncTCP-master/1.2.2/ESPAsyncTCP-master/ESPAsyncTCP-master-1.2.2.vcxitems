@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding ="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+  <PropertyGroup Label="Globals" >
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{d5ad8bd3-d139-4b48-92b8-da302baac3b1}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\AsyncPrinter.cpp" />
+<ClCompile Include="$(MSBuildThisFileDirectory)src\ESPAsyncTCP.cpp" />
+<ClCompile Include="$(MSBuildThisFileDirectory)src\ESPAsyncTCPbuffer.cpp" />
+<ClCompile Include="$(MSBuildThisFileDirectory)src\SyncClient.cpp" />
+<ClCompile Include="$(MSBuildThisFileDirectory)src\tcp_axtls.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\AsyncPrinter.h" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\async_config.h" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\DebugPrintMacros.h" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\ESPAsyncTCP.h" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\ESPAsyncTCPbuffer.h" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\SyncClient.h" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\tcp_axtls.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)library.properties" />
+<Text Include="$(MSBuildThisFileDirectory)LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)library.json" />
+<None Include="$(MSBuildThisFileDirectory)README.md" />
+  </ItemGroup>
+</Project>

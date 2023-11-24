@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding ="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+  <PropertyGroup Label="Globals" >
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{1d4a4ac6-3e6a-49b3-a642-4db4d41bc11a}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\w6100\esp32_w6100.cpp" />
+<ClCompile Include="$(MSBuildThisFileDirectory)src\w6100\esp_eth\esp_eth_mac_w6100.c" />
+<ClCompile Include="$(MSBuildThisFileDirectory)src\w6100\esp_eth\esp_eth_phy_w6100.c" />
+<ClCompile Include="$(MSBuildThisFileDirectory)src\w6100\esp_eth\esp_eth_spi_w6100.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\WebServer_ESP32_W6100.h" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\WebServer_ESP32_W6100.hpp" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\WebServer_ESP32_W6100_Debug.h" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\WebServer_ESP32_W6100_Impl.h" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\w6100\esp32_w6100.h" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\w6100\esp_eth\esp_eth_w6100.h" />
+<ClInclude Include="$(MSBuildThisFileDirectory)src\w6100\esp_eth\w6100.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)library.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)changelog.md" />
+<None Include="$(MSBuildThisFileDirectory)CONTRIBUTING.md" />
+<None Include="$(MSBuildThisFileDirectory)library.json" />
+<None Include="$(MSBuildThisFileDirectory)LICENSE" />
+<None Include="$(MSBuildThisFileDirectory)README.md" />
+  </ItemGroup>
+</Project>
